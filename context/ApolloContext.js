@@ -71,7 +71,7 @@ const GET_PROFILES = `
         bio
         location
         website
-        twitterUrl
+        twitter
         picture {
           ... on NftImage {
             contractAddress
@@ -152,7 +152,7 @@ const UPDATE_PROFILE = `
      bio
      location
      website
-     twitterUrl
+     twitter
      picture {
        ... on NftImage {
          contractAddress
@@ -319,7 +319,7 @@ const GET_PUBLICATIONS = `
     bio
     location
     website
-    twitterUrl
+    twitter
     handle
     picture {
       ... on NftImage {
@@ -673,7 +673,7 @@ const RECOMMENDED_PROFILES = `
         bio
         location
         website
-        twitterUrl
+        twitter
         picture {
           ... on NftImage {
             contractAddress
@@ -827,7 +827,7 @@ const EXPLORE_PUBLICATIONS = `
     bio
     location
     website
-    twitterUrl
+    twitter
     handle
     picture {
       ... on NftImage {
@@ -1271,7 +1271,7 @@ const GET_PUBLICATION = `
     bio
     location
     website
-    twitterUrl
+    twitter
     handle
     picture {
       ... on NftImage {

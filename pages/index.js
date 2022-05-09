@@ -30,6 +30,8 @@ export default function Home() {
 					return post.__typename == "Post";
 				});
 			setPublications(postPublications);
+			console.log(postPublications);
+			console.log(response.data.recommendedProfiles);
 			setRecommendedProfiles(response.data.recommendedProfiles);
 		})();
 	}, []);

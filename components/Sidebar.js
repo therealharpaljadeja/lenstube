@@ -12,28 +12,27 @@ import Link from "next/link";
 
 export default function Sidebar({ recommendedProfiles }) {
 	return (
-		<VStack height="100%" width="100%" padding={5}>
+		<VStack height='100%' width='100%' padding={5}>
 			<VStack
-				borderWidth="2px"
-				width="100%"
+				borderWidth='2px'
+				width='100%'
 				padding={5}
-				borderRadius="6px"
-				alignItems="flex-start"
-			>
-				<Heading size="md">Recommeded Profiles</Heading>
-				<VStack width="100%">
+				borderRadius='6px'
+				alignItems='flex-start'>
+				<Heading size='md'>Recommeded Profiles</Heading>
+				<VStack width='100%'>
 					{recommendedProfiles
 						? recommendedProfiles.map((profile) => {
 								return (
 									<Link
 										key={profile.id}
-										href={`/user/${profile.id}`}
-									>
+										href={`/user/${profile.id}`}>
 										<HStack
-											width="100%"
-											justifyContent="flex-start"
-										>
-											{profile.picture ? (
+											width='100%'
+											justifyContent='flex-start'>
+											{profile.picture !== null &&
+											profile.picture.original !=
+												undefined ? (
 												<Avatar
 													src={
 														profile.picture.original
@@ -42,11 +41,11 @@ export default function Sidebar({ recommendedProfiles }) {
 												/>
 											) : (
 												<Avatar
-													backgroundColor="white"
-													borderWidth="2px"
-													borderColor="purple.400"
-													size="md"
-													bg="transparent"
+													backgroundColor='white'
+													borderWidth='2px'
+													borderColor='purple.400'
+													size='md'
+													bg='transparent'
 													src={svgAvatarGenerator(
 														profile.ownedBy,
 														{
@@ -57,9 +56,8 @@ export default function Sidebar({ recommendedProfiles }) {
 											)}
 
 											<VStack
-												alignItems="flex-start"
-												spacing="0"
-											>
+												alignItems='flex-start'
+												spacing='0'>
 												<span>{profile.name}</span>
 												<span>{profile.handle}</span>
 											</VStack>

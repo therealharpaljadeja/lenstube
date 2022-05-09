@@ -133,7 +133,7 @@ export default function Profile() {
 								borderRadius: "5px",
 								width: "100%",
 							}}>
-							{profile.picture ? (
+							{profile.picture && profile.picture.original ? (
 								<Avatar
 									size='2xl'
 									position='absolute'
@@ -205,11 +205,11 @@ export default function Profile() {
 										<span>Followers</span>
 									</VStack>
 								</HStack>
-								{profile.twitterUrl ? (
+								{profile.twitter ? (
 									<Tag>
 										<FiTwitter />
 										<span style={{ marginLeft: "5px" }}>
-											{profile.twitterUrl.replace(
+											{profile.twitter.replace(
 												"https://twitter.com/",
 												""
 											)}
