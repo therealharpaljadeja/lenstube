@@ -59,30 +59,21 @@ export default function Home() {
 										<VStack key={publication.id}>
 											<Link
 												href={`/post/${publication.id}`}>
-												<Box
+												<video
+													src={
+														publication.metadata
+															.media[0].original
+															.url
+													}
 													style={{
 														width: "100%",
-														paddingTop: "56.25%",
-														height: "0",
-														position: "relative",
-														background: "black",
-													}}>
-													<video
-														src={
-															publication.metadata
-																.media[0]
-																.original.url
-														}
-														style={{
-															width: "100%",
-															height: "100%",
-															position:
-																"absolute",
-															top: "0",
-															left: "0",
-														}}
-													/>
-												</Box>
+														height: "100%",
+														// position:
+														// 	"absolute",
+														top: "0",
+														left: "0",
+													}}
+												/>
 											</Link>
 											<HStack
 												justifyContent='flex-start'

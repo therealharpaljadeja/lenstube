@@ -43,6 +43,7 @@ function CreateProfileModal() {
 			console.log(account);
 			(async () => {
 				let response2 = await getEnabledModules();
+				console.log(response2.data.enabledModules);
 				setEnabledModules(response2.data.enabledModules);
 			})();
 		}
@@ -75,7 +76,7 @@ function CreateProfileModal() {
 								recipient: feeRecipient,
 							},
 					  }
-					: { freeFollowModule: true },
+					: { emptyFollowModule: true },
 		};
 		let response = await createProfile(createProfileRequestObj);
 		onClose();
